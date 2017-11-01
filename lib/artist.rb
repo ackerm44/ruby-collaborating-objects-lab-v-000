@@ -40,7 +40,7 @@ class Artist
     if self.find(name).nil?
       @@all << name
     else
-    self.find(name) || self.create(name)
+      self.create(name)
   end
 
   def print_songs
