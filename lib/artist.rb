@@ -37,7 +37,11 @@ class Artist
   end
 
   def self.find_or_create_by_name(name)
-    self.find(name) || self.create(name)
+    if self.find(name) != nil
+      name
+    else
+      self.create(name)
+    end
 
 
     # @@all.detect do |artist|
