@@ -28,6 +28,7 @@ class Artist
 
   def find(name)
     @@all.detect {|artist| artist.name == name}
+  end
 
   def create(name)
     artist = self.new(name)
@@ -41,7 +42,7 @@ class Artist
         self.new(name)
       #   self.name
       # else
-        
+
       end
     end
 
