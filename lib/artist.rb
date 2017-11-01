@@ -20,7 +20,6 @@ class Artist
 
   def self.all
     @@all
-    puts self.all
   end
 
   def save
@@ -28,16 +27,19 @@ class Artist
   end
 
   def self.find(name)
-    #self.detect {|artist| artist.name == name}
+    self.detect {|artist| artist.name == name}
   end
 
-  def self.create(name)
-    artist = Artist.new(name)
-    artist.save
-    artist
-  end
+  # #def self.create(name)
+  #   artist = Artist.new(name)
+  #   artist.save
+  #   artist
+  # end
 
   def self.find_or_create_by_name(name)
+    if self.find(name).nil?
+      @@all << name
+    else
     self.find(name) || self.create(name)
   end
 
