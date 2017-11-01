@@ -38,14 +38,14 @@ class Artist
 
   def self.find_or_create_by_name(name)
     self.find(name) || self.create(name)
-      
-    
+
+
     # @@all.detect do |artist|
     #   if artist.name != name
     #     self.new(name)
     #   #   self.name
     #   # else
-    # 
+    #
     #   end
     # end
 
