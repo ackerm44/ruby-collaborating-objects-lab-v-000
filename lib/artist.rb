@@ -41,6 +41,7 @@ class Artist
       if artist.name != name
         new_artist = self.new(name)
         new_artist.name = name
+        puts new_artist.name
       else
         name
       end
