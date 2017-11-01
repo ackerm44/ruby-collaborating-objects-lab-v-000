@@ -24,7 +24,7 @@ class Artist
 
   def save
     @@all << self
-    puts @@all
+    puts @@all.name
   end
 
   def self.find(name)
