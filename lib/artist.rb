@@ -10,6 +10,7 @@ class Artist
   end
 
   def add_song(song)
+    if self.find(song) != song
     @songs << song
     #song.artist = self
   end
