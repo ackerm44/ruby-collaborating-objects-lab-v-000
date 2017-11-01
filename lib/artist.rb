@@ -41,6 +41,7 @@ class Artist
       @@all << name
     else
       self.create(name)
+    end
   end
 
   def print_songs
