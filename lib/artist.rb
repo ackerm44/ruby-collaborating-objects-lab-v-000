@@ -32,12 +32,12 @@ class Artist
   def self.find_or_create_by_name(name)
     @@all.detect do |artist|
       if artist.name != name
-      #   self.name
-      # else
-        self.new(name)
+         self.name
+      else
+        find(name)
       end
     end
-      
+
   end
 
   def print_songs
