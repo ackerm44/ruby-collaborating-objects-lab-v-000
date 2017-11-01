@@ -28,9 +28,9 @@ class Artist
 
   def self.find_or_create_by_name(name)
       @@all.detect do |artist|
-        if artist.name == name
-          self.name
-        else
+        if artist.name != name
+        #   self.name
+        # else
           self.new(name)
         end
       end
